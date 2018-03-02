@@ -1,0 +1,35 @@
+#form1 p {
+	width:400px;
+	color:red;
+
+}
+div {
+	display:inline-block;
+	width:300px;
+	vertical-align: top;
+}
+#form1 {
+	width:300px;
+	display:inline-block;
+	margin-right: 50px;
+}
+/*.temp {
+	display:none;
+}*/
+.card {
+	height: 150px;
+	width: 300px;
+	border:2px solid black;
+	margin-bottom:10px;
+}
+.card p {
+	text-align:center;
+	margin-top:39px;
+}
+.des {
+	display: none;
+	text-align: right;
+}
+/*.disappear {
+	display:block;
+}*/

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Card</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="contactCard.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			$('#form1').submit(function() {
+				// return false
+				var fm = $('.infn').val();
+				var ln = $('.inln').val();
+				var des = $('.ind').val();
+				$('#cards').append("<div class='card'><p>"+fm+" "+ln+"</p><p class='des'>"+des+"</p><p class='disappear'>Click for description</p><div>")
+
+				return false;
+			});
+			$(document).on('click','.card',function() {
+				$(this).children().toggle()
+			})
+			
+		});
+	</script>
+</head>
+<body>
+	<form id='form1'>
+		<p>First Name: <input class="infn" type="text" name="firstName"></p>
+		<p>Last Name: <input class="inln" type="text" name="lastName"></p>
+		<p>Description: <textarea class="ind" name="description"></textarea></p>
+		<input class="btn" type="submit" value="Submit">
+	</form>
+	
+	<div id="cards">
+	
+	</div>
+</body>
+</html>
